@@ -40,7 +40,8 @@ public class HelloWorldJavaFX extends Application {
     
     public void start(Stage theStage){
         theStage.setTitle("Canvas Example");
-        Media musicFile = new Media("file:///C:/Users/Phillip/Documents/NetBeansProjects/HelloWorldJavaFX/src/music/ParodiaGodOfWar.mp3");
+        Media musicFile = new Media(this.getClass().getResource("/music/ParodiaGodOfWar.mp3").toExternalForm());
+        //Media musicFile = new Media("/HelloWorldJavaFX/music/ParodiaGodOfWar.mp3");
         mediaplayer = new MediaPlayer(musicFile);
         mediaplayer.setVolume(0.1);
         //mediaplayer.setAutoPlay(true);
